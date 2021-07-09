@@ -1,0 +1,88 @@
+<div class="layout-wrapper" [ngClass]="{'layout-menu-horizontal': menuMode === 'horizontal',
+                                        'layout-menu-popup': menuMode === 'popup',
+                                        'layout-menu-overlay': menuMode === 'overlay',
+                                        'layout-menu-static': menuMode === 'static',
+                                        'layout-menu-static-inactive': (menuMode == 'static' && menuActive === false),
+                                        'p-input-filled': inputStyle === 'filled', 'p-ripple-disabled': !ripple}" (click)="onLayoutClick()">
+
+    <div class="topbar">
+        <div class="topbar-main">
+            <a href="#" id="menu-button" (click)="onMenuButtonClick($event)">
+                <span class="pi pi-bars"></span>
+            </a>
+    
+            <a href="/">
+                <img alt="main logo" src="assets/layout/images/logo-main.png" class="logo">
+            </a>
+    
+            <div class="app-name">
+                <a href="/">Liane</a>
+            </div>
+    
+            <a href="#" id="user-display" (click)="onTopbarMenuButtonClick($event)">
+                <span class="username">Samanta Owens</span>
+                <span class="userrole">Admin</span>
+                <img alt="main logo" src="assets/layout/images/avatar.png">
+            </a>
+    
+            <ul id="topbar-menu" class="fadeInDown animated" [ngClass]="{'topbar-menu-visible': topbarMenuActive}">
+                <li class="search-item">
+                    <div>
+                        <input type="text" pInputText placeholder="Search" />
+                        <span class="pi pi-search"></span>
+                    </div>
+                </li>
+                <li #profile [ngClass]="{'menuitem-active':activeTopbarItem === profile}">
+                    <a href="#" (click)="onTopbarItemClick($event, profile)">
+                        <i class="topbar-icon pi pi-fw pi-user"></i>
+                        <span class="topbar-item-name">PROFILE</span>
+                    </a>
+                    <ul>
+                        <li role="menuitem">
+                            <a href="#" (click)="onTopbarSubItemClick($event)">
+                                <i class="pi pi-fw pi-user"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" (click)="onTopbarSubItemClick($event)">
+                                <i class="pi pi-fw pi-lock"></i>
+                                <span>Privacy</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" (click)="onTopbarSubItemClick($event)">
+                                <i class="pi pi-fw pi-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#" (click)="onTopbarSubItemClick($event)">
+                                <i class="pi pi-fw pi-sign-out"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <app-menu></app-menu>
+    </div>
+
+    <div class="layout-main">
+        <div class="layout-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="footer clearfix">
+            <img src="assets/layout/images/logo-dark.png" alt="logo" />
+            <span class="app-name">LIANE</span>
+            <div class="footer-right">
+                <a href="https://github.com/lucioleandro" target="blank"><i class="pi pi-github"></i></a>
+                <a href="http://twitter.com/ellucion" target="blank"><i class="pi pi-twitter"></i></a>
+                <span>Todos os direitos reservados - 2021</span>
+            </div>
+        </div>
+    </div>
+
+    <app-config></app-config>
+</div>
