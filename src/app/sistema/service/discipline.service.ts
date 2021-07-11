@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 @Injectable({providedIn: 'root'})
 export class DisciplineService {
 
-    apiUrl = 'assets/demo/data/disciplines.json';
+    apiUrl = '/assets/demo/data/disciplines.json';
     disciplines: Discipline[] = [];
 
     constructor(private http: HttpClient) { }

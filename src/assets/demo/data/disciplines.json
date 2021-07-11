@@ -4,7 +4,7 @@
             "name": "Lógica de Programação",
             "code": "inf027",
             "semester": 1,
-            "requiredsDiscipline": [],
+            "requiredDisciplines": [],
             "status": "APROVED",
             "schedules": [
                 {
@@ -21,7 +21,7 @@
             "name": "Laboratório de Programação",
             "code": "inf028",
             "semester": 2,
-            "requiredsDiscipline": [],
+            "requiredDisciplines": [],
             "status": "APROVED",
             "schedules": [
                 {"day": "Tuesday", "periodTime": 1},
@@ -32,7 +32,9 @@
             "name": "Programação Orientada a Objetos",
             "code": "inf008",
             "semester": 3,
-            "requiredsDiscipline": [],
+            "requiredDisciplines": [
+                {"code": "inf028"}
+            ],
             "status": "APROVED",
             "schedules": [
                 {"day": "Monday", "periodTime": 1},

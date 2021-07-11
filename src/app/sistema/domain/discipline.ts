@@ -4,7 +4,7 @@ export interface Discipline {
     name: string;
     code: string;
     semester: number;
-    requiredsDiscipline?: Discipline[];
+    requiredDisciplines?: Discipline[];
     status?: string;
     schedules?: Schedule[];
 }
