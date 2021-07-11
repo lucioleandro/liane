@@ -2,20 +2,25 @@ import {Component, OnInit} from '@angular/core';
 import { DisciplineService } from './../service/discipline.service';
 import { NotificationService } from './../../core/services/notification.service';
 import { Schedule } from './../domain/schedule';
+import { Discipline } from '../domain/discipline';
 
 @Component({
     templateUrl: './dashboard.component.html'
 })
 export class DashboardDemoComponent implements OnInit {
 
-    sourceList: any[];
-    targetList: any[];
+    originalList: Discipline[];
+    sourceList: Discipline[];
+    targetList: Discipline[];
 
     constructor(private service: DisciplineService,
                 private notificationService: NotificationService) { }
 
     ngOnInit() {
-        this.sourceList = this.service.getDisciplines();
+        this.service.getDisciplines().subscribe(lista => {
+            this.originalList = lista;
+            this.sourceList = lista;
+        });
         this.targetList = [];
     }
 

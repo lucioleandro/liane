@@ -29,7 +29,6 @@ import {AppLoginComponent} from './pages/app.login.component';
 
 // Demo services
 import {IconService} from './sistema/service/iconservice';
-import {PhotoService} from './sistema/service/photoservice';
 
 // Application services
 import {MenuService} from './core/menu/services/app.menu.service';
@@ -71,7 +70,7 @@ import { MessageService } from 'primeng/api';
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-         IconService, PhotoService, MenuService, MessageService
+         IconService, MenuService, MessageService
     ],
     bootstrap: [AppComponent]
 })
