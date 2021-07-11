@@ -11,7 +11,7 @@ export class IconService {
 
     selectedIcon: any;
 
-    apiUrl = 'assets/sistema/sistema/icons.json';
+    apiUrl = 'assets/demo/data/icons.json';
 
     getIcons() {
         return this.http.get(this.apiUrl).pipe(map((response: any) => {

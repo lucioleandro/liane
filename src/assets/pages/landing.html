@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>Liane - Landing Page</title>
+        <title>PrimeNG - Verona - Landing Page</title>
 
         <link rel="stylesheet" type="text/css" href="../theme/theme-green.css">
         <link rel="stylesheet" type="text/css" href="../layout/css/layout-dark.css">
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="header-content">
-                    <h1>Presents Liane</h1>
+                    <h1>PrimeNG Presents Verona</h1>
                     <h2>Minimal layout inspired by a beautiful city</h2>
                     <div>
                         <a href="#">
@@ -54,7 +54,7 @@
                         </a>
                     </div>
                     <div class="introduction-image">
-                        <img src="../layout/images/landing/liane.png" alt="liane" />
+                        <img src="../layout/images/landing/verona.png" alt="verona" />
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
 
 
         <script>
-            LianeLanding = {
+            VeronaLanding = {
                 addClass: function(element, className) {
                     if (element.classList)
                         element.classList.add(className);
@@ -241,10 +241,10 @@
             document.getElementById('menu-button').addEventListener('click', function(e) {
                 var menu = document.getElementById('landing-menu');
 
-                if(LianeLanding.hasClass(menu, 'menu-active'))
-                    LianeLanding.hideMenu();
+                if(VeronaLanding.hasClass(menu, 'menu-active'))
+                    VeronaLanding.hideMenu();
                 else
-                    LianeLanding.showMenu();
+                    VeronaLanding.showMenu();
 
                 e.preventDefault();
             });
@@ -252,7 +252,7 @@
             var menuLinks = document.querySelectorAll('#landing-menu a');
             for (i = 0; i < menuLinks.length; i++) {
                 menuLinks[i].addEventListener('click', function(e) {
-                    LianeLanding.hideMenu();
+                    VeronaLanding.hideMenu();
                 });
             }
         </script>

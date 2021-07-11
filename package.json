@@ -1,7 +1,6 @@
 {
     "name": "liane",
     "version": "10.0.0",
-    "license": "PrimeNG Commercial",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
