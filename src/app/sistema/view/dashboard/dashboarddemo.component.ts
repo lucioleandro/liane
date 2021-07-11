@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { DisciplineService } from './../service/discipline.service';
-import { NotificationService } from './../../core/services/notification.service';
-import { Schedule } from './../domain/schedule';
-import { Discipline } from '../domain/discipline';
+import { DisciplineService } from '../../service/discipline.service';
+import { NotificationService } from '../../../core/services/notification.service';
+import { Schedule } from '../../domain/schedule';
+import { Discipline } from '../../domain/discipline';
 
 @Component({
     templateUrl: './dashboard.component.html'

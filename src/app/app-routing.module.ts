@@ -1,6 +1,6 @@
 import {RouterModule} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {DashboardDemoComponent} from './sistema/view/dashboarddemo.component';
+import {DashboardDemoComponent} from './sistema/view/dashboard/dashboarddemo.component';
 import {DocumentationComponent} from './sistema/view/documentation.component';
 import {AppMainComponent} from './app.main.component';
 import {AppNotfoundComponent} from './pages/app.notfound.component';

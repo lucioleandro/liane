@@ -24,7 +24,7 @@ import {AppMenuitemComponent} from './core/menu/app.menuitem.component';
 
 // Demo pages
 import { AppCodeModule } from './shared/components/app-code/app.code.component';
-import {DashboardDemoComponent} from './sistema/view/dashboarddemo.component';
+import {DashboardDemoComponent} from './sistema/view/dashboard/dashboarddemo.component';
 import {AppLoginComponent} from './pages/app.login.component';
 
 // Demo services
