@@ -428,6 +428,9 @@ body {
     .footer {
         background-color: #f5f8f9;
         padding: 16px 32px;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
 
         img {
             width: 40px;

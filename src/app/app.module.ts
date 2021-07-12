@@ -14,6 +14,8 @@ import {PickListModule} from 'primeng/picklist';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {RippleModule} from 'primeng/ripple';
 import {ToastModule} from 'primeng/toast';
+import {TableModule} from 'primeng/table';
+
 
 // Application Components
 import {AppComponent} from './app.component';
@@ -37,6 +39,7 @@ import { AppNotfoundComponent } from './pages/app.notfound.component';
 import { AppErrorComponent } from './pages/app.error.component';
 import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
 import { MessageService } from 'primeng/api';
+import { DisciplinesGradeComponent } from './sistema/view/dashboard/disciplines-grade/disciplines-grade.component';
 
 @NgModule({
     imports: [
@@ -53,6 +56,7 @@ import { MessageService } from 'primeng/api';
         RadioButtonModule,
         RippleModule,
         ToastModule,
+        TableModule,
         AppCodeModule
     ],
     declarations: [
@@ -67,6 +71,7 @@ import { MessageService } from 'primeng/api';
         AppMenuitemComponent,
         DashboardDemoComponent,
         AppLoginComponent,
+        DisciplinesGradeComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

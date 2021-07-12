@@ -6,13 +6,17 @@
             <p-pickList [source]="sourceList" [target]="targetList" 
             [showSourceControls]="false" 
             [showTargetControls]="false"
-            (onMoveToTarget)="movedToTarget($event)">
+            (onMoveToTarget)="movedToTarget($event)"
+            (onMoveToSource)="movedToSource($event)">
                 <ng-template let-discipline pTemplate="item">
                     <div>
-                        <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{discipline.code}} - {{discipline.name}} - {{discipline.status}}</div>
+                        <div style="font-size:14px;float:right;margin:15px 5px 0 0">{{discipline.code}} - {{discipline.name}}</div>
                     </div>
                 </ng-template>
             </p-pickList>
+        </div>
+        <div class="card">
+            <app-disciplines-grade [disciplinesGradeList]="this.disciplinesGradeList"></app-disciplines-grade>
         </div>
     </div>
 </div>

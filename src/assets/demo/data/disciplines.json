@@ -8,11 +8,11 @@
             "status": "APROVED",
             "schedules": [
                 {
-                    "day": "Monday",
+                    "day": "monday",
                     "periodTime": 1
                 },
                 {
-                    "day": "Wednasday",
+                    "day": "wednasday",
                     "periodTime": 1
                 }
             ]
@@ -24,8 +24,8 @@
             "requiredDisciplines": [],
             "status": "APROVED",
             "schedules": [
-                {"day": "Tuesday", "periodTime": 1},
-                {"day": "Wednasday", "periodTime": 2}
+                {"day": "tuesday", "periodTime": 1},
+                {"day": "wednasday", "periodTime": 2}
             ]
         },
         {
@@ -37,8 +37,8 @@
             ],
             "status": "APROVED",
             "schedules": [
-                {"day": "Monday", "periodTime": 1},
-                {"day": "Wednasday", "periodTime": 3}
+                {"day": "monday", "periodTime": 1},
+                {"day": "wednasday", "periodTime": 3}
             ]
         }
     ]

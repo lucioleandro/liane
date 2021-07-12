@@ -3,6 +3,7 @@ import { DisciplineService } from '../../service/discipline.service';
 import { NotificationService } from '../../../core/services/notification.service';
 import { Schedule } from '../../domain/schedule';
 import { Discipline } from '../../domain/discipline';
+import { DisciplineGrade } from './disciplines-grade/domain/disciplene-grade';
 
 @Component({
     templateUrl: './dashboard.component.html'
@@ -16,6 +17,8 @@ export class DashboardDemoComponent implements OnInit {
     message: string;
     detailMessage: string;
 
+    disciplinesGradeList: DisciplineGrade[];
+
     constructor(private service: DisciplineService,
                 private notificationService: NotificationService) { }
 
@@ -25,6 +28,29 @@ export class DashboardDemoComponent implements OnInit {
             this.sourceList = lista;
         });
         this.targetList = [];
+        this.buildDisciplinesgradeList();
+    }
+
+    movedToSource(list) {
+        this.removeDisciplineFromGrade(list);
+    }
+
+    private removeDisciplineFromGrade(list: any) {
+        list.items[0].schedules.forEach(element => {
+            switch (element.periodTime) {
+                case 1:
+                    this.disciplinesGradeList[0][element.day] = '';
+                    break;
+                case 2:
+                    this.disciplinesGradeList[1][element.day] = '';
+                    break;
+                case 3:
+                    this.disciplinesGradeList[2][element.day] = '';
+                    break;
+                default:
+                    break;
+            }
+        });
     }
 
     movedToTarget(list) {
@@ -34,6 +60,7 @@ export class DashboardDemoComponent implements OnInit {
             this.notificationService.showErrorMessage(this.message, this.detailMessage);
             return;
         }
+        this.setDisciplineToGrade(list);
     }
 
     private hasRequiredDisciplines(item: Discipline) {
@@ -77,8 +104,31 @@ export class DashboardDemoComponent implements OnInit {
         return scheduleA.day === scheduleB.day && scheduleA.periodTime === scheduleB.periodTime;
     }
 
+    private setDisciplineToGrade(list: any) {
+        list.items[0].schedules.forEach(element => {
+            switch (element.periodTime) {
+                case 1:
+                    this.disciplinesGradeList[0][element.day] = list.items[0].code;
+                    break;
+                case 2:
+                    this.disciplinesGradeList[1][element.day] = list.items[0].code;
+                    break;
+                case 3:
+                    this.disciplinesGradeList[2][element.day] = list.items[0].code;
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+
     private setMessage(message: string, detail: string) {
         this.message = message;
         this.detailMessage = detail;
     }
+
+    private buildDisciplinesgradeList() {
+        this.disciplinesGradeList = [{time: 1}, {time: 2}, {time: 3}];
+    }
+    
 }
