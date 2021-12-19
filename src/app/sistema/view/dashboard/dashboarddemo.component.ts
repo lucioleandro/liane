@@ -108,13 +108,13 @@ export class DashboardDemoComponent implements OnInit {
         list.items[0].schedules.forEach(element => {
             switch (element.periodTime) {
                 case 1:
-                    this.disciplinesGradeList[0][element.day] = list.items[0].code;
+                    this.disciplinesGradeList[0][element.day] = list.items[0].name;
                     break;
                 case 2:
-                    this.disciplinesGradeList[1][element.day] = list.items[0].code;
+                    this.disciplinesGradeList[1][element.day] = list.items[0].name;
                     break;
                 case 3:
-                    this.disciplinesGradeList[2][element.day] = list.items[0].code;
+                    this.disciplinesGradeList[2][element.day] = list.items[0].name;
                     break;
                 default:
                     break;

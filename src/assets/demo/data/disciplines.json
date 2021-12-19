@@ -1,44 +1,122 @@
 {
     "disciplines": [
         {
-            "name": "Lógica de Programação",
-            "code": "inf027",
-            "semester": 1,
+            "name": "Gestão Socioambiental e Sustentabilidade",
+            "code": "ADM584",
+            "semester": 9,
             "requiredDisciplines": [],
-            "status": "APROVED",
+            "status": "",
             "schedules": [
                 {
                     "day": "monday",
-                    "periodTime": 1
+                    "periodTime": 2
                 },
                 {
                     "day": "wednasday",
+                    "periodTime": 2
+                }
+            ]
+        },
+        {
+            "name": "Projeto de Pesquisa em Administração",
+            "code": "ADM589",
+            "semester": 9,
+            "requiredDisciplines": [],
+            "status": "",
+            "schedules": [
+                {
+                    "day": "tuesday",
+                    "periodTime": 2
+                },
+                {
+                    "day": "thursday",
+                    "periodTime": 2
+                }
+            ]
+        },
+        {
+            "name": "Finanças Coorporativas",
+            "code": "ADM551",
+            "semester": null,
+            "requiredDisciplines": [],
+            "status": "",
+            "schedules": [
+                {
+                    "day": "wednasday",
+                    "periodTime": 1
+                },
+                {
+                    "day": "friday",
                     "periodTime": 1
                 }
             ]
         },
         {
-            "name": "Laboratório de Programação",
-            "code": "inf028",
-            "semester": 2,
+            "name": "Geografia da Bahia",
+            "code": "GEO130",
+            "semester": null,
             "requiredDisciplines": [],
-            "status": "APROVED",
+            "status": "",
             "schedules": [
-                {"day": "tuesday", "periodTime": 1},
-                {"day": "wednasday", "periodTime": 2}
+                {
+                    "day": "thursday",
+                    "periodTime": 2
+                },
+                {
+                    "day": "thursday",
+                    "periodTime": 3
+                }
             ]
         },
         {
-            "name": "Programação Orientada a Objetos",
-            "code": "inf008",
-            "semester": 3,
-            "requiredDisciplines": [
-                {"code": "inf028"}
-            ],
-            "status": "APROVED",
+            "name": "Higiene e Segurança do Trabalho",
+            "code": "ENG530",
+            "semester": null,
+            "requiredDisciplines": [],
+            "status": "",
             "schedules": [
-                {"day": "monday", "periodTime": 1},
-                {"day": "wednasday", "periodTime": 3}
+                {
+                    "day": "monday",
+                    "periodTime": 2
+                },
+                {
+                    "day": "wednasday",
+                    "periodTime": 3
+                }
+            ]
+        },
+        {
+            "name": "Planejamento Programação e Controle da Produção T1",
+            "code": "ENG326",
+            "semester": null,
+            "requiredDisciplines": [],
+            "status": "",
+            "schedules": [
+                {
+                    "day": "monday",
+                    "periodTime": 3
+                },
+                {
+                    "day": "wednasday",
+                    "periodTime": 3
+                }
+            ]
+        },
+        {
+            "name": "Planejamento Programação e Controle da Produção T2",
+            "code": "ENG326",
+            "semester": null,
+            "requiredDisciplines": [],
+            "status": "",
+            "schedules": [
+                {
+                    "day": "tuesday",
+                    "periodTime": 3
+                },
+                {
+                    "day": "thursday",
+                    "periodTime": 3
+                }
             ]
         }
     ]
